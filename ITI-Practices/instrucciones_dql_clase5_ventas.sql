@@ -182,3 +182,9 @@ WHERE departamento = 'Contabilidad';
 
 SELECT * FROM vendedores
 WHERE direccion = 'Tumbaco';
+
+
+-- Instruccion AND
+-- Obtener vendedores de Tecnologia que vivan en El Panecillo
+SELECT * FROM vendedores
+WHERE direccion = 'El Panecillo' AND departamento = 'Tecnologia';
