@@ -221,3 +221,24 @@ WHERE salario BETWEEN 450 AND 800;
 
 SELECT * FROM vendedores
 WHERE id BETWEEN 3 AND 10;
+
+
+-- Instruccion LIKE
+	-- 'A%': la cadena comienza con A
+	-- '%A': la cadena termina con A
+	-- '%A%': A estara entre la cadena
+	-- '_A%': Aqui la segunda letra sera la A
+	-- '%A_': La segunda desde la ultima letra sera A
+	
+-- Obtener los vendedores que su nombre empiece con la letra J
+SELECT * FROM vendedores
+WHERE nombre LIKE 'J%';
+
+-- Obtener los vendedores que su apellido termine con la letra z
+SELECT * FROM vendedores
+WHERE apellido LIKE '%z';
+
+-- Obtener los vendedores que en el nombre tengan una letra o y en el apellido tengan una letra a
+SELECT * FROM vendedores
+WHERE nombre LIKE '%o%' AND apellido LIKE '%a%'
+ORDER BY 2;
