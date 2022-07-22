@@ -160,3 +160,16 @@ ORDER BY 2 DESC; -- Orden Descendente de la segunda columna seleccionada (apelli
 
 -- Instruccion LIMIT
 SELECT * FROM clientes LIMIT 3;
+
+-- Obtener los 2 ultimos registros
+SELECT * FROM clientes
+ORDER BY id DESC
+LIMIT 2;
+
+SELECT * FROM clientes LIMIT 2,5;
+
+SELECT * FROM clientes
+WHERE nacionalidad = 'Ecuatoriano'
+LIMIT 2;
+
+
