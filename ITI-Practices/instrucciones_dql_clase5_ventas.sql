@@ -254,3 +254,32 @@ SELECT COUNT(salario) AS numero_vendedores, departamento FROM vendedores
 WHERE salario = 425
 GROUP BY departamento
 ORDER BY 1;
+
+
+-- Instrucciones JOIN
+
+-- Instruccion INNER JOIN: (Devuelve registros que coincidan con otra tabla)
+-- Obtener listado de pedidos con el nombre del cliente y el nombre del vendedor
+SELECT * FROM pedidos
+INNER JOIN vendedores ON vendedores.id = pedidos.vendedor_id
+INNER JOIN clientes ON clientes.id = pedidos.cliente_id;
+
+-- Obtener un reporte que tenga: codigo de pedido, descripcion de pedido, fecha, nombre del vendedor,
+-- departamento al que pertenece, nombre del cliente y su email.
+SELECT pedidos.id AS codigo_pedido, pedidos.descripcion AS desc_pedido, pedidos.fecha AS fecha_pedido, 
+vendedores.nombre AS nombre_vendedor, vendedores.apellido AS apellido_vendedor, vendedores.departamento, 
+clientes.nombre AS nombre_cliente, clientes.apellido AS apellido_cliente, clientes.email AS email_cliente
+FROM pedidos
+INNER JOIN vendedores ON vendedores.id = pedidos.vendedor_id
+INNER JOIN clientes ON clientes.id = pedidos.cliente_id
+WHERE pedidos.fecha = '2022-07-14';
+
+SELECT pedidos.id AS codigo_pedido, pedidos.descripcion AS desc_pedido, pedidos.fecha AS fecha_pedido, 
+vendedores.nombre AS nombre_vendedor, vendedores.apellido AS apellido_vendedor, vendedores.departamento, 
+clientes.nombre AS nombre_cliente, clientes.apellido AS apellido_cliente, clientes.email AS email_cliente
+FROM pedidos, vendedores, clientes
+-- INNER JOIN vendedores ON vendedores.id = pedidos.vendedor_id
+-- INNER JOIN clientes ON clientes.id = pedidos.cliente_id
+WHERE vendedores.id = pedidos.vendedor_id
+AND clientes.id = pedidos.cliente_id
+AND pedidos.fecha = '2022-07-14';
