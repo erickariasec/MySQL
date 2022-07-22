@@ -173,3 +173,12 @@ WHERE nacionalidad = 'Ecuatoriano'
 LIMIT 2;
 
 
+-- Instruccion WHERE
+SELECT * FROM clientes
+WHERE id = 2;
+
+SELECT * FROM vendedores
+WHERE departamento = 'Contabilidad';
+
+SELECT * FROM vendedores
+WHERE direccion = 'Tumbaco';
