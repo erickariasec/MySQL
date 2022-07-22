@@ -156,3 +156,7 @@ ORDER BY 2; -- Orden Ascendente de la segunda columna seleccionada (apellido)
 
 SELECT nombre, apellido, direccion FROM clientes
 ORDER BY 2 DESC; -- Orden Descendente de la segunda columna seleccionada (apellido)
+
+
+-- Instruccion LIMIT
+SELECT * FROM clientes LIMIT 3;
