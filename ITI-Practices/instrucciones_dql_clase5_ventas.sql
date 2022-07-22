@@ -213,3 +213,11 @@ AND salario = 425;
 -- Instruccion NOT
 SELECT * FROM vendedores
 WHERE departamento NOT IN ('Contabilidad', 'Ventas', 'Legumbres');
+
+
+-- Instruccion BETWEEN
+SELECT * FROM vendedores
+WHERE salario BETWEEN 450 AND 800;
+
+SELECT * FROM vendedores
+WHERE id BETWEEN 3 AND 10;
