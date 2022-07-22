@@ -132,4 +132,7 @@ SELECT * FROM ventas_clase5_dql.clientes;
 SELECT DISTINCT nacionalidad FROM clientes;
 
 
-
+-- Instruccion COUNT
+SELECT COUNT(*) FROM clientes;
+SELECT COUNT(*) AS numero_registros FROM clientes
+WHERE direccion = 'Calderon';
