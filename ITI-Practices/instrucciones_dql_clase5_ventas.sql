@@ -128,4 +128,8 @@ SELECT id codigo_pedido, descripcion, fecha fecha_pedido FROM pedidos; -- Cambia
 SELECT * FROM ventas_clase5_dql.clientes;
 
 
+-- Instruccion DISTINCT
+SELECT DISTINCT nacionalidad FROM clientes;
+
+
 
