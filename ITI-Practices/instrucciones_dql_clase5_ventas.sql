@@ -242,3 +242,15 @@ WHERE apellido LIKE '%z';
 SELECT * FROM vendedores
 WHERE nombre LIKE '%o%' AND apellido LIKE '%a%'
 ORDER BY 2;
+
+
+-- Instruccion GROUP BY
+SELECT salario, departamento FROM vendedores
+WHERE salario = 425
+GROUP BY departamento;
+
+-- Contar numero de vendedores que tienen sueldo de 425 por departamento
+SELECT COUNT(salario) AS numero_vendedores, departamento FROM vendedores
+WHERE salario = 425
+GROUP BY departamento
+ORDER BY 1;
