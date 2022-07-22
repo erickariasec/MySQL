@@ -136,3 +136,23 @@ SELECT DISTINCT nacionalidad FROM clientes;
 SELECT COUNT(*) FROM clientes;
 SELECT COUNT(*) AS numero_registros FROM clientes
 WHERE direccion = 'Calderon';
+
+
+-- Instruccion ORDER BY
+SELECT * FROM clientes
+ORDER BY id; -- Orden Ascendente por defecto
+
+SELECT * FROM clientes
+ORDER BY id DESC; -- Orden Descendente
+
+SELECT nombre, apellido, direccion FROM clientes
+ORDER BY nombre, direccion ASC; -- Orden Ascendente por defecto (no hace falta colocar ASC)
+
+SELECT nombre, apellido, direccion FROM clientes
+ORDER BY nombre, direccion DESC; -- Orden Descendiente
+
+SELECT nombre, apellido, direccion FROM clientes
+ORDER BY 2; -- Orden Ascendente de la segunda columna seleccionada (apellido)
+
+SELECT nombre, apellido, direccion FROM clientes
+ORDER BY 2 DESC; -- Orden Descendente de la segunda columna seleccionada (apellido)
