@@ -198,3 +198,13 @@ ORDER BY nombre;
 
 SELECT * FROM vendedores
 WHERE departamento = 'Contabilidad' OR departamento = 'Ventas';
+
+
+-- Instruccion IN
+-- Obtener vendedores que pertenezan a Contabilidad o Ventas
+SELECT * FROM vendedores
+WHERE departamento IN ('Contabilidad', 'Ventas', 'Legumbres');
+
+SELECT * FROM vendedores
+WHERE departamento IN ('Contabilidad', 'Ventas', 'Legumbres')
+AND salario = 425;
