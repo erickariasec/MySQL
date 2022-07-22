@@ -208,3 +208,8 @@ WHERE departamento IN ('Contabilidad', 'Ventas', 'Legumbres');
 SELECT * FROM vendedores
 WHERE departamento IN ('Contabilidad', 'Ventas', 'Legumbres')
 AND salario = 425;
+
+
+-- Instruccion NOT
+SELECT * FROM vendedores
+WHERE departamento NOT IN ('Contabilidad', 'Ventas', 'Legumbres');
